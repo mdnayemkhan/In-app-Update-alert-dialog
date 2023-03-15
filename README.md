@@ -8,14 +8,14 @@ Set up In app update alert dialog in your android app
 implementation 'com.google.android.play:core:1.10.3'
 ```
 
->Step 2.Paste this code above Launcher activity's onCreate Bundle:
+>Step 2.Paste this code above Main activity's onCreate Bundle:
 ```
 private AppUpdateManager mAppUpdateManager;
 private static final int RC_APP_UPDATE = 100;
  
 ```
 
->Step 3.Paste this code inside Launcher activity's onCreate Bundle:
+>Step 3.Paste this code inside Main activity's onCreate Bundle:
 ```
         mAppUpdateManager = AppUpdateManagerFactory.create(this);
         mAppUpdateManager.getAppUpdateInfo().addOnSuccessListener(new OnSuccessListener<AppUpdateInfo>() {
@@ -40,7 +40,7 @@ private static final int RC_APP_UPDATE = 100;
 
 ```
   
-  >Step 4.Paste this code after Launcher activity's onCreate Bundle:
+  >Step 4.Paste this code after Main activity's onCreate Bundle:
 ```
  private InstallStateUpdatedListener installStateUpdatedListener = new InstallStateUpdatedListener() {
         @Override
